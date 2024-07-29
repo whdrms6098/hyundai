@@ -1,0 +1,152 @@
+@import url("./reset.css");
+@import url("./common.css");
+@import url("./font.css");
+
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+#header .gnb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+}
+
+#header .gnb .logo {
+    min-width: 44px;
+    height: 44px;
+    filter: invert(1);
+}
+
+#header .gnb .logo-img {
+    width: 160px;
+    height: 48px;
+    position: relative;
+}
+
+#header .gnb .menu {
+    width: 47px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#header .gnb .menu::before,
+#header .gnb .menu::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+}
+
+#header .lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* color: var(--color-black); */
+}
+
+#header .lang span {
+    opacity: .3;
+    font-weight: bold;
+}
+
+#header .lang span.active {
+    opacity: 1;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 17px;
+}
+
+#footer .f-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .f-info span,
+#footer .f-info small {
+    font-size: 12px;
+    font-weight: 500;
+    /* color: var(--color-black); */
+}
+
+#footer .lang-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .lang-list li {
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+#footer .lang-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .lang-list li:not(:last-child)::after {
+    content: "/";
+    color: var(--color-whtie);
+}
+
+#footer .f-mark {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#footer .f-mark .wa {
+    width: 56px;
+}
+
+#footer .f-mark .bsi {
+    width: 78px;
+}
+
+@media (max-width:850px) {
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #footer .lang-list {
+        order: 1;
+    }
+
+    #footer .f-info {
+        align-items: center;
+        order: 2;
+    }
+
+    #footer .f-mark {
+        order: 3;
+    }
+}
+
+
+@media (max-width:780px) {
+    #footer {
+        padding: 100px 30px 17px;
+    }
+}
